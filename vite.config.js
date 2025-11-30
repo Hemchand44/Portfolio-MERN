@@ -3,5 +3,10 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
+  server: {
+    host: true,     // allow access from mobile
+    port: 5173      // or your custom port
+  },
   plugins: [react()],
 })
+

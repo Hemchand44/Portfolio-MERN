@@ -2,31 +2,16 @@ import React, { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-const Navbar = () => {
+const Navbar = ({ theme, setTheme }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Detect scroll and change navbar background
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // Smooth scroll function
-  const handleMenuItemClick = (sectionId) => {
-    setActiveSection(sectionId);
-    setIsOpen(false);
-
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   const menuItems = [
     { id: "about", label: "About" },
@@ -38,107 +23,106 @@ const Navbar = () => {
     { id: "contact", label: "Contact" },
   ];
 
+  const handleMenuItemClick = (sectionId) => {
+    setIsOpen(false);
+    const section = document.getElementById(sectionId);
+    if (section) section.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${
-        isScrolled ? "bg-[#ffffff] bg-opacity-50 backdrop-blur-md shadow-md" : "bg-transparent"
-      }`}
+      className={`
+        fixed top-0 left-0 w-full z-50 
+        transition duration-300 
+        ${isScrolled ? "bg-white/70 dark:bg-[#0d1117]/70 backdrop-blur-lg shadow-md" : "bg-transparent"}
+      `}
     >
-      <div className="text-white py-5 flex justify-between items-center">
-        {/* Logo */}
-        <div className="text-xl font-semibold cursor-pointer font-poppins p-6">
+      {/* MAX WIDTH CONTAINER — THIS FIXES EVERYTHING */}
+      <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-5 flex justify-between items-center">
+
+        {/* LOGO */}
+        <div className="text-xl font-semibold font-poppins cursor-pointer">
           <span className="text-[#FF204E]">&lt;</span>
-          <span className="text-[#000000]">Hemchand</span>
-          <span className="text-[#FF204E]">/</span>
-          <span className="text-[#FF204E]">&gt;</span>
+          <span className="text-black dark:text-white">Hemchand</span>
+          <span className="text-[#FF204E]">/&gt;</span>
         </div>
 
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8 text-[#1C244B] font-poppins p-6 text-lg">
+        {/* DESKTOP MENU */}
+        <ul className="hidden md:flex space-x-8 font-medium">
           {menuItems.map((item) => (
-            <li
-              key={item.id}
-              className={`cursor-pointer hover:text-[#33428e] ${
-                activeSection === item.id ? "text-[#1C244B]" : ""
-              }`}
-            >
-              <button onClick={() => handleMenuItemClick(item.id)}>
+            <li key={item.id}>
+              <button
+                onClick={() => handleMenuItemClick(item.id)}
+                className="cursor-pointer text-[#1C244B] dark:text-gray-200 hover:text-[#33428e] dark:hover:text-purple-300"
+              >
                 {item.label}
               </button>
             </li>
           ))}
         </ul>
 
-        {/* Social Icons */}
-        <div className="hidden md:flex space-x-4">
-          <a
-            href="https://github.com/Hemchand44"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#1C244B] hover:text-[#33428e]"
-          >
+        {/* DESKTOP ICONS */}
+        <div className="hidden md:flex space-x-4 items-center">
+          <a href="https://github.com/Hemchand44" target="_blank" className="text-[#1C244B] dark:text-gray-200 hover:text-purple-300">
             <FaGithub size={24} />
           </a>
-          <a
-            href="https://www.linkedin.com/in/hemchand-prajapati70"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#1C244B] hover:text-[#33428e]"
-          >
+
+          <a href="https://www.linkedin.com/in/hemchand-prajapati70" target="_blank" className="text-[#1C244B] dark:text-gray-200 hover:text-purple-300">
             <FaLinkedin size={24} />
           </a>
+
+          <button
+            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+            className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-black dark:text-white"
+          >
+            {theme === "light" ? "🌙" : "☀️"}
+          </button>
         </div>
 
-        {/* Mobile Menu Icon */}
+        {/* MOBILE MENU ICON */}
         <div className="md:hidden">
           {isOpen ? (
-            <FiX
-              className="text-3xl text-[#8245ec] cursor-pointer"
-              onClick={() => setIsOpen(false)}
-            />
+            <FiX className="text-3xl text-purple-600 dark:text-purple-300" onClick={() => setIsOpen(false)} />
           ) : (
-            <FiMenu
-              className="text-3xl text-[#8245ec] cursor-pointer"
-              onClick={() => setIsOpen(true)}
-            />
+            <FiMenu className="text-3xl text-purple-600 dark:text-purple-300" onClick={() => setIsOpen(true)} />
           )}
         </div>
       </div>
 
-      {/* Mobile Menu Items */}
+      {/* MOBILE MENU */}
       {isOpen && (
-        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#050414] bg-opacity-50 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-lg md:hidden">
-          <ul className="flex flex-col items-center space-y-4 py-4 text-gray-300">
+        <div className="md:hidden 
+      w-full 
+      absolute left-0 top-full 
+      bg-white/90 dark:bg-[#0d1117]/90 
+      backdrop-blur-xl
+      shadow-lg 
+      py-6 
+      px-8
+      z-40">
+          <ul className="space-y-4 py-4">
             {menuItems.map((item) => (
-              <li
-                key={item.id}
-                className={`cursor-pointer hover:text-white ${
-                  activeSection === item.id ? "text-[#8245ec]" : ""
-                }`}
-              >
-                <button onClick={() => handleMenuItemClick(item.id)}>
+              <li key={item.id}>
+                <button
+                  onClick={() => handleMenuItemClick(item.id)}
+                  className="text-lg text-gray-800 dark:text-gray-200 hover:text-purple-500"
+                >
                   {item.label}
                 </button>
               </li>
             ))}
-            <div className="flex space-x-4">
-              <a
-                href="https://github.com/Hemchand44"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white"
-              >
-                <FaGithub size={24} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/hemchand-prajapati70"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white"
-              >
-                <FaLinkedin size={24} />
-              </a>
+
+            <div className="flex justify-center space-x-6 pt-4">
+              <FaGithub size={24} className="text-gray-700 dark:text-gray-200" />
+              <FaLinkedin size={24} className="text-gray-700 dark:text-gray-200" />
             </div>
+
+            <button
+              onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+              className="mt-4 px-4 py-2 bg-gray-200 dark:bg-gray-700 text-black dark:text-white rounded-lg shadow"
+            >
+              {theme === "light" ? "🌙 Dark" : "☀️ Light"}
+            </button>
           </ul>
         </div>
       )}

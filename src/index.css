@@ -8,9 +8,14 @@
     font-family: "Epilogue", Sans-serif;
 }
 
-html {
+/* html {
+  scroll-behavior: smooth;
+} */
+html, body {
+  overflow-x: hidden !important;
   scroll-behavior: smooth;
 }
+
 
 @layer utilities {
     .clip-path-custom {

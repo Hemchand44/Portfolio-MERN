@@ -17,31 +17,17 @@ import githubLogo from './assets/tech_logo/github.png';
 import vscodeLogo from './assets/tech_logo/vscode.png';
 import postmanLogo from './assets/tech_logo/postman.png';
 import netlifyLogo from './assets/tech_logo/netlify.png';
-// import vercelLogo from './assets/tech_logo/vercel.png';
-// import sassLogo from './assets/tech_logo/sass.png';
-// import angularLogo from './assets/tech_logo/angular.png';
-// import reduxLogo from './assets/tech_logo/redux.png';
-// import nextjsLogo from './assets/tech_logo/nextjs.png';
-// import gsapLogo from './assets/tech_logo/gsap.png';
-// import materialuiLogo from './assets/tech_logo/materialui.png';
-// import springbootLogo from './assets/tech_logo/springboot.png';
-// import firebaseLogo from './assets/tech_logo/firebase.png';
-// import cppLogo from './assets/tech_logo/cpp.png';
-// import typescriptLogo from './assets/tech_logo/typescript.png';
-// import mcLogo from './assets/tech_logo/mc.png';
-// import figmaLogo from './assets/tech_logo/figma.png';
-// import postgreLogo from './assets/tech_logo/postgre.png';
-// import csharpLogo from './assets/tech_logo/csharp.png';
+
 
 // Experience Section Logo's
 import CelebalLOgo from './assets/company_logo/celbal_logo.png';
 import CodeSoftLogo from './assets/company_logo/codesoft_logo.png';
-// import newtonschoolLogo from './assets/company_logo/newtonschool_logo.png';
+
 
 // Education Section Logo's
 import AllenLogo from './assets/education_logo/Allen_logo.png';
 import MGLogo from './assets/education_logo/MG_logo.png';
-// import vpsLogo from './assets/education_logo/vps_logo.png';
+
 
 // Project Section Logo's
 import Shipment_trackerLogo from './assets/work_logo/Shipment_tracker.png';
@@ -50,9 +36,7 @@ import Vintage_vaultLogo from './assets/work_logo/Vintage_vault.png';
 import Lion_gameLogo from './assets/work_logo/Lion_game.png';
 import online_votingLogo from './assets/work_logo/online_voting.png';
 import Admin_dashboard from './assets/work_logo/Admin_dashboard.png';
-// import cmLogo from './assets/work_logo/cm.png';
-// import imagesearchLogo from './assets/work_logo/image_search.png';
-// import removebgLogo from './assets/work_logo/remove_bg.png';
+
 
 
 
@@ -64,6 +48,7 @@ import GFG from './assets/certificate_logo/GFG160.png'
 import TCS from './assets/certificate_logo/TCS.png'
 import DBMS from './assets/certificate_logo/Udemy-DBMS.png'
 import celebal from './assets/certificate_logo/celebal.png'
+import Java from './assets/certificate_logo/Java_logo.png'
 
 
 
@@ -79,12 +64,6 @@ export const SkillsInfo = [
       { name: 'React JS', logo: reactjsLogo },
       { name: 'Tailwind CSS', logo: tailwindcssLogo },
       { name: 'Bootstrap', logo: bootstrapLogo },
-      // { name: 'SASS', logo: sassLogo },
-      // { name: 'Angular', logo: angularLogo },
-      // { name: 'Redux', logo: reduxLogo },
-      // { name: 'Next JS', logo: nextjsLogo },
-      // { name: 'GSAP', logo: gsapLogo },
-      // { name: 'Material UI', logo: materialuiLogo },
     ],
   },
   {
@@ -94,9 +73,6 @@ export const SkillsInfo = [
       { name: 'Express JS', logo: expressjsLogo },
       { name: 'MySQL', logo: mysqlLogo },
       { name: 'MongoDB', logo: mongodbLogo },
-      // { name: 'Springboot', logo: springbootLogo },
-      // { name: 'Firebase', logo: firebaseLogo },
-      // { name: 'PostgreSQL', logo: postgreLogo },
     ],
   },
   {
@@ -106,9 +82,6 @@ export const SkillsInfo = [
       { name: 'Java', logo: javaLogo },
       { name: 'Python', logo: pythonLogo },
       { name: 'JavaScript', logo: javascriptLogo },
-      // { name: 'C++', logo: cppLogo },
-      // { name: 'C-Sharp', logo: csharpLogo },
-      // { name: 'TypeScript', logo: typescriptLogo },
     ],
   },
   {
@@ -120,8 +93,6 @@ export const SkillsInfo = [
       { name: 'Postman', logo: postmanLogo },
       { name: 'Compass', logo: cLogo },
       { name: 'Netlify', logo: netlifyLogo },
-      // { name: 'Vercel', logo: vercelLogo },
-      // { name: 'Figma', logo: figmaLogo },
     ],
   },
 ];
@@ -321,6 +292,13 @@ export const SkillsInfo = [
       title: "Database Management System",
       description:
         "Completed Udemy certification in Database Management Systems (DBMS), covering concepts of data modeling, SQL, normalization, and efficient database design.",
+      image: DBMS,
+    },
+    {
+      id: 7,
+      title: "Java BAsic",
+      description:
+        "Completed HackerRank certification in Java (Basic)",
       image: DBMS,
     },
   ]

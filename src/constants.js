@@ -296,9 +296,9 @@ export const SkillsInfo = [
     },
     {
       id: 7,
-      title: "Java BAsic",
+      title: "Java Basic",
       description:
         "Completed HackerRank certification in Java (Basic)",
-      image: DBMS,
+      image: Java,
     },
   ]

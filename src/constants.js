@@ -30,6 +30,7 @@ import MGLogo from './assets/education_logo/MG_logo.png';
 
 
 // Project Section Logo's
+import EcoFridge from './assets/work_logo/Eco-Fridge.png';
 import Shipment_trackerLogo from './assets/work_logo/Shipment_tracker.png';
 import spotify_cloneLogo from './assets/work_logo/spotify_clone.png';
 import Vintage_vaultLogo from './assets/work_logo/Vintage_vault.png';
@@ -183,6 +184,17 @@ export const SkillsInfo = [
   export const projects = [
     {
       id: 0,
+      title: "Eco-Frodge",
+      description:
+        "A smart web application that helps users monitor food items and track their expiry dates to reduce waste. The system categorizes products into Fresh, Nearly Expiring, and Expired, and provides real-time status updates with an intuitive dashboard for better food management.",
+      image: EcoFridge,
+      tags: ["React.jS", "JavaScript","node.js"],
+      github: "https://github.com/Hemchand44/Eco-Fridge-Frontend",
+      github: "https://github.com/Hemchand44/Eco-Fridge-server",
+      webapp: "https://eco-fridge-frontend.vercel.app/",
+    },
+    {
+      id: 1,
       title: "Shipment Package Tracker",
       description:
         "A powerful and user-friendly React.js web application that allows users to track their shipments in real-time. Features include package creation, sender/receiver details, live location tracking, and an intuitive dashboard for a seamless delivery experience..",
@@ -192,7 +204,7 @@ export const SkillsInfo = [
       webapp: "",
     },
     {
-      id: 1,
+      id: 2,
       title: "Online Voting Portal",
       description:
         "A secure web application that enables users to cast their votes digitally using their phones. It ensures user authentication, data integrity, and real-time vote counting for a transparent election process.",
@@ -202,7 +214,7 @@ export const SkillsInfo = [
       webapp: "https://evoting-portal.netlify.app/",
     },
     {
-      id: 2,
+      id: 3,
       title: "Music app",
       description:
         "A music streaming web app built with React that lets users play, pause, and switch songs with a smooth and responsive UI, inspired by Spotify’s design and functionality.",
@@ -212,7 +224,7 @@ export const SkillsInfo = [
       webapp: "https://music-copy.netlify.app/",
     },
     {
-      id: 3,
+      id: 4,
       title: "Lion Game",
       description:
         "A fun browser-based game built with HTML, CSS, and JavaScript where players control a lion, and the difficulty increases as the score gets higher, making it more challenging and engaging.",
@@ -222,7 +234,7 @@ export const SkillsInfo = [
       webapp: "https://lion1-game.netlify.app/",
     },
     {
-      id: 4,
+      id: 5,
       title: "Vintage vault- Re-commerce website",
       description:
         "A web application developed using HTML, CSS, and JavaScript that facilitates secure buying and selling of pre-owned gadgets. It focuses on providing a user-friendly interface and a reliable platform for sustainable gadget trading.",
@@ -232,7 +244,7 @@ export const SkillsInfo = [
       webapp: "https://vintage-vaultt.netlify.app/",
     },
     {
-      id: 5,
+      id: 6,
       title: "Admiin dashboard",
       description:
         "A React.js-powered dashboard that helps administrators manage orders, employees, and business operations efficiently through an intuitive and responsive interface.",

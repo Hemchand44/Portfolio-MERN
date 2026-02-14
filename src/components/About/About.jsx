@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ReactTypingEffect from "react-typing-effect";
 import Tilt from "react-parallax-tilt";
-import profileImage from "../../assets/profile9.png";
+import profileImage from "../../assets/profile12.png";
 
 const About = () => {
   const [isHovered, setIsHovered] = useState(false);

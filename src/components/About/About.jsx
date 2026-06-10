@@ -65,7 +65,7 @@ const About = () => {
 
           {/* BUTTON (now dark-mode compatible) */}
           <a
-            href="https://drive.google.com/file/d/1UIv9loWqHzWxfXtcSWV3klxzGGOJhHfH/view?usp=sharing"
+            href="https://drive.google.com/file/d/1O2oxU-nHYjx-OafMle75zHia5KHse66G/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             onMouseEnter={() => setIsHovered(true)}

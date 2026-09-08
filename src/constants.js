@@ -189,7 +189,7 @@ export const SkillsInfo = [
   export const projects = [
     {
       id: 0,
-      title: "Eco-Frodge",
+      title: "Eco-Fridge",
       description:
         "A smart web application that helps users monitor food items and track their expiry dates to reduce waste. The system categorizes products into Fresh, Nearly Expiring, and Expired, and provides real-time status updates with an intuitive dashboard for better food management.",
       image: EcoFridge,

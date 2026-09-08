@@ -2,9 +2,23 @@ import React, { useState } from "react";
 import ReactTypingEffect from "react-typing-effect";
 import Tilt from "react-parallax-tilt";
 import profileImage from "../../assets/profile12.png";
+import emailjs from '@emailjs/browser';
+
 
 const About = () => {
   const [isHovered, setIsHovered] = useState(false);
+
+  const handleResumeDownload = () => {
+    emailjs.send(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      {
+        time: new Date().toLocaleString('en-IN'),
+        referrer: document.referrer || 'direct',
+        page: window.location.href,
+      }
+    ).catch((err) => console.error(err));
+  };
 
   return (
     <section
@@ -65,9 +79,10 @@ const About = () => {
 
           {/* BUTTON (now dark-mode compatible) */}
           <a
-            href="https://drive.google.com/file/d/1UIv9loWqHzWxfXtcSWV3klxzGGOJhHfH/view?usp=sharing"
+            href="/Hemchand.pdf"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={handleResumeDownload}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             className={`inline-block px-8 py-3 text-lg rounded-full font-medium transition-all duration-300

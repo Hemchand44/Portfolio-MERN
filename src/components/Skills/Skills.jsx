@@ -48,14 +48,14 @@ const Skills = () => (
           </h3>
 
           {/* Skill Items */}
-          <Tilt
+          {/* <Tilt
             tiltMaxAngleX={20}
             tiltMaxAngleY={20}
             perspective={1000}
             scale={1.05}
             transitionSpeed={1000}
             gyroscope={true}
-          >
+          > */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full">
               {category.skills.map((skill) => (
                 <div
@@ -82,7 +82,7 @@ const Skills = () => (
                 </div>
               ))}
             </div>
-          </Tilt>
+          {/* </Tilt> */}
         </div>
       ))}
     </div>

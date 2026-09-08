@@ -17,7 +17,8 @@ import githubLogo from './assets/tech_logo/github.png';
 import vscodeLogo from './assets/tech_logo/vscode.png';
 import postmanLogo from './assets/tech_logo/postman.png';
 import netlifyLogo from './assets/tech_logo/netlify.png';
-
+import typeScriptLogo from './assets/tech_logo/typescript.png'
+import dockerLogo from './assets/tech_logo/docker.png'
 
 // Experience Section Logo's
 import CelebalLOgo from './assets/company_logo/celbal_logo.png';
@@ -37,6 +38,8 @@ import Vintage_vaultLogo from './assets/work_logo/Vintage_vault.png';
 import Lion_gameLogo from './assets/work_logo/Lion_game.png';
 import online_votingLogo from './assets/work_logo/online_voting.png';
 import Admin_dashboard from './assets/work_logo/Admin_dashboard.png';
+import Lead_Tracker from './assets/work_logo/Lead Tracker.png';
+import Resume_analyzer from './assets/work_logo/Resume Analyzer.png'
 
 
 
@@ -65,6 +68,7 @@ export const SkillsInfo = [
       { name: 'React JS', logo: reactjsLogo },
       { name: 'Tailwind CSS', logo: tailwindcssLogo },
       { name: 'Bootstrap', logo: bootstrapLogo },
+      { name: 'TypeScript', logo: typeScriptLogo },
     ],
   },
   {
@@ -90,6 +94,7 @@ export const SkillsInfo = [
     skills: [
       { name: 'Git', logo: gitLogo },
       { name: 'GitHub', logo: githubLogo },
+      { name: 'Docker', logo: dockerLogo },
       { name: 'VS Code', logo: vscodeLogo },
       { name: 'Postman', logo: postmanLogo },
       { name: 'Compass', logo: cLogo },
@@ -195,6 +200,26 @@ export const SkillsInfo = [
     },
     {
       id: 1,
+      title: "AI Resume Analyzer",
+      description:
+        "An AI-powered tool that analyzes your resume against a job description using the Gemini API and generates ATS-optimized resume suggestions with a match score.",
+      image: Resume_analyzer,
+      tags: [ "Node.js", "Expres", "Google Gemini API", "PDF text extraction"],
+      github: "https://github.com/Hemchand44/Resume-analyzer.git",
+      webapp: "https://resume-analyzer-zeta-seven.vercel.app/",
+    },
+    {
+      id: 2,
+      title: "Lead Tracker Bot",
+      description:
+        "A Telegram-based lead management platform that captures leads from a web form and delivers them instantly via a Telegram bot, built with Node.js/Express and Supabase/PostgreSQL.",
+      image: Lead_Tracker,
+      tags: [ "Node.js", "Express", "Supabase/PostgreSQL", "Telegram Bot API"," HTML/CSS/JS"],
+      github: "https://github.com/Hemchand44/Telegram-Bot.git",
+      webapp: "https://lead-landing-form.onrender.com",
+    },
+    {
+      id: 3,
       title: "Shipment Package Tracker",
       description:
         "A powerful and user-friendly React.js web application that allows users to track their shipments in real-time. Features include package creation, sender/receiver details, live location tracking, and an intuitive dashboard for a seamless delivery experience..",
@@ -204,7 +229,7 @@ export const SkillsInfo = [
       webapp: "",
     },
     {
-      id: 2,
+      id: 4,
       title: "Online Voting Portal",
       description:
         "A secure web application that enables users to cast their votes digitally using their phones. It ensures user authentication, data integrity, and real-time vote counting for a transparent election process.",
@@ -214,7 +239,7 @@ export const SkillsInfo = [
       webapp: "https://evoting-portal.netlify.app/",
     },
     {
-      id: 3,
+      id: 5,
       title: "Music app",
       description:
         "A music streaming web app built with React that lets users play, pause, and switch songs with a smooth and responsive UI, inspired by Spotify’s design and functionality.",
@@ -224,7 +249,7 @@ export const SkillsInfo = [
       webapp: "https://music-copy.netlify.app/",
     },
     {
-      id: 4,
+      id: 6,
       title: "Lion Game",
       description:
         "A fun browser-based game built with HTML, CSS, and JavaScript where players control a lion, and the difficulty increases as the score gets higher, making it more challenging and engaging.",
@@ -234,7 +259,7 @@ export const SkillsInfo = [
       webapp: "https://lion1-game.netlify.app/",
     },
     {
-      id: 5,
+      id: 7,
       title: "Vintage vault- Re-commerce website",
       description:
         "A web application developed using HTML, CSS, and JavaScript that facilitates secure buying and selling of pre-owned gadgets. It focuses on providing a user-friendly interface and a reliable platform for sustainable gadget trading.",
@@ -244,7 +269,7 @@ export const SkillsInfo = [
       webapp: "https://vintage-vaultt.netlify.app/",
     },
     {
-      id: 6,
+      id: 8,
       title: "Admiin dashboard",
       description:
         "A React.js-powered dashboard that helps administrators manage orders, employees, and business operations efficiently through an intuitive and responsive interface.",
@@ -253,6 +278,8 @@ export const SkillsInfo = [
       github: "https://github.com/Hemchand44/admin-dashboard.git",
       webapp: "#",
     },
+    
+    
     
   ];  
 
